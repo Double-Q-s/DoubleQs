@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grade 3</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style type="text/css">
+	*{
+		margin:0px;
+	}
+	.header
+	{
+		overflow:hidden;
+		background-color:#264d73;
+		padding:10px;
+		color:white;
+		font-family:Rockwell Nova;
+		font-size:50px;
+		border-top-left-radius:15px;
+		border-top-right-radius:15px;
+	}
+	.full{
+		background-image:url(bgimg9.jpg);
+		background-repeat:none;
+		background-size:cover;
+		margin-top:-15px;
+		min-height:600px;
+	}
+	.mainbg
+	{
+		margin:55px;
+		box-shadow:-5px 7px 5px  #676565;
+		border-radius:15px;
+		background-color:#ededed;
+	}
+	.icon
+	{
+		color:black;
+		font-size:70px;
+	}
+	.input{
+		width:220px;
+		padding:10px;
+		font-family:Gill Sans Nova;
+		font-size:19px;
+		margin-bottom:20px;
+        border-radius:10px;
+	}
+	@keyframes move{
+      0%{opacity:0%; left:-100px;}
+      25%{opacity:10%; left:-75px;}
+      50%{opacity:25%; left:-50px;}
+      75%{opacity:55%; left:-25px;}
+      100%{opacity:80%; left:0px;}
+	}
+	.qp{
+		font-size:20px;
+        margin-left:40px;
+        font-family:Rockwell Nova;
+        border: 3.7px solid;
+        padding:5px;
+        box-shadow:3px 6px 5px #3e4140;
+        width:500px;
+        animation-name:move;
+        animation-duration:0.6s;
+        animation-timing-function:ease-out;
+        position:relative;
+	}
+	.button{
+		background-color:lightgray;
+		padding:5px;
+		font-family:Gill Sans Nova;
+		font-size:17px;
+		color:black;
+		width:50px;
+		margin-left:5px; 
+		border-radius:5px;	
+		border:2px solid;
+		text-decoration:none;
+
+	}
+	.circle{
+		height:40px;
+		width:50px;
+		background-color:lightgray;
+		border-radius:50%;
+		color:black;
+		text-decoration:none;
+		border:2px solid;
+		padding-left:5px; 
+		padding-right:5px; 
+	}
+</style>
+<body>
+<div class="full"><br><br>
+<div class="mainbg">	
+  <h1 align="center" class="header"><label class="icon"><i class="fa fa-book"></i></label>&nbsp;QUICK MATH QUIZ</h1><br><br>
+  <h2 style="font-family:comic sans MS; font-size:27px; margin-bottom:10px; margin-left:20px; "><u>QUESTION 3(GRADE 3): </u></h2>
+  <h4 style="font-family:Comic Sans MS; margin-left:20px;"><i>Instructions: Enter the right answer in the text bar,if the correct answer is entered,the text bar will be highlighted (Green),if the wrong answer is entered,the text bar will be highlighted(Red).</i></h4><br><br>
+  <p class="qp" id="demo">Q3. Solve: (6 - 3) 12:__________</p><br><br>
+  <form>
+    <label style="margin-left:20px; font-size:18px;">Answer: </label>
+  	<input class="input" autocomplete="off" type="text" id="tx1" placeholder="Write Your Answer">
+  	<input type="button" class="button" value="Submit" onclick="check(this.form)" style="width:70px;">
+  </form><br>
+  <label style="margin-left:120px; font-family:Gill Sans Nova; font-size:15px;" ><a href="Q_2.html" class="button">Previous</a>
+   <a href="Q_4.html" ><input type="submit" id="button" value="Next" class="button" disabled></a></label><br><br>
+</div><br>
+<script language="javascript">
+ function check(form)
+ {
+ 	document.getElementById("button").disabled= false;
+
+     if( form.tx1.value == "36" ) {
+		document.getElementById("demo").style.color = "#339966";
+		document.getElementById("demo").style.fontSize = "25px";
+		document.getElementById("tx1").disabled = true;
+
+	}
+     else{
+		document.getElementById("demo").style.color = "#d00101";
+		document.getElementById("demo").style.fontSize = "25px";
+		document.getElementById("tx1").disabled = true;
+	}
+ 	
+
+ }
+</script>
+</body>
+</html>

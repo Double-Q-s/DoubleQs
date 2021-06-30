@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create Your Own Test </title>
+</head>
+<style type="text/css">
+ body, html{
+ 	height:100%;
+ 	margin:0px;
+ }
+.back{
+	background-image: linear-gradient(7deg,rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2 )), url('bgimg14.jpg');
+	background-repeat:no-repeat;
+	background-size:cover;
+	filter:blur(4px);
+	height:100%;
+	margin:0px;
+}
+.content{
+	position:absolute;
+	top:210px;
+	left:450px;
+}	
+.banner{
+	background-color:#d4d4d4;
+	width:450px;
+	padding:13px; 
+	border-radius:20px;
+	border:2px solid #264d73;
+}
+.heading{
+	font-family:Gill Sans Nova;
+	font-size:30px;
+	margin-top:10px;
+
+}
+.para{
+	font-family:Calibri;
+	font-size:15px;
+	margin-top:-10px;
+	color:#828282;
+	font-style:italic;
+}
+.textbar{
+	padding:10px;
+	width:350px;
+	font-size:16px;
+	font-family:Rockwell Nova;
+	border-radius:15px;
+	border:3px inset #4a826f;
+	margin-bottom:10px;
+}
+.button{
+	padding:10px;
+	width:230px;
+    border:2px solid black;
+    color:white;
+    margin-left:80px;
+    border-radius:20px;
+	background:-webkit-linear-gradient(left,#24c25b,#19863f);
+	font-size:17px;
+	font-family:rockwell nova;
+}
+.button:hover{
+	color:black;
+	font-size:18px;
+	background:-webkit-linear-gradient(left,#24c25b,#105628);
+	transition:all 0.6s ease;
+}
+</style>
+<body>
+<div class="back"></div>
+<div class="content">
+   <div class="banner">
+   	 <p class="heading">Make Your Own Test</p>
+   	 <p class="para">Enter Title or Course Name of the Test You Wish to Make </p>
+	 <input type="text" class="textbar" name="t1" id="t1" placeholder="Enter Test Name"><br>
+	 <input type="button" class="button" name="b1" id="b1" value="Create">
+   </div>	 
+</div>
+</body>
+</html>

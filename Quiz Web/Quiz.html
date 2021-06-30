@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quick Math Test</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style type="text/css">
+	*{
+		margin:0px;
+	}
+	.header
+	{
+		overflow:hidden;
+		background-color:#264d73;
+		padding:10px;
+		color:white;
+		font-family:Rockwell Nova;
+		font-size:50px;
+		border-top-left-radius:15px;
+		border-top-right-radius:15px;
+	}
+	.mainbg
+	{
+		margin:15px;
+		box-shadow:-9px 7px 5px  #676565;
+		border-radius:15px;
+		margin:35px; 
+		background-color:#ededed;
+
+	}
+	.icon
+	{
+		color:#121212;
+		font-size:70px;
+	}
+	.para1
+	{
+		padding-top:60px;
+        font-size:35px;
+        font-family:Comic Sans MS;
+        margin-left:20px; 
+	}
+	.text{
+	   width:350px;	
+	   padding:15px;
+	   border-radius:13px; 
+       margin-left:20px; 
+       font-family:Gill Sans Nova;
+	   font-size:25px;
+	   margin-bottom:15px; 
+	}
+	.b3{
+	   width:270px;	
+	   padding:15px;
+	   border-radius:27px;
+       font-family:Bahnschrift;
+       font-size:19px;	
+       margin-left:90px; 
+	   margin-bottom:30px; 
+	   background-color:#336699;
+	}
+	.b3:hover{
+		background-color:#204060;
+		transition:all 0.4s ease; 
+		font-size:22px;
+		color:white;
+	}
+	.bg1{
+	  padding:20px;	
+      background-color:#00264d;
+	}
+	.line{
+		width:250px;
+	}
+	.heading{
+      color:white;
+      font-family:Calibri;
+      padding-top:20px; 
+      padding-bottom:10px; 
+      font-size:50px;
+	}
+	.letter{
+		color:#862d2d;
+	}
+	.para2{
+		color:white;
+		font-size:30px;
+		font-family:Rockwell Nova;
+		padding-left:40px; 
+	}
+	.pic{
+		margin-top:-190px; 
+		width:350px;
+		margin-right:30px; 
+		border-top-right-radius:10px;
+		border-top-left-radius:10px;
+	}
+	.para3{
+		color:white;
+		font-size:30px;
+		font-family:Rockwell Nova;
+		padding-right:30px; 
+	}
+	.pic2{
+		margin-top:-270px; 
+		width:360px;
+		margin-left:30px; 
+		border-top-right-radius:10px;
+		border-top-left-radius:10px;
+	}
+	.endbg{
+		background-color:#000d1a;
+		padding:20px;
+		
+	}
+	.link{
+	  text-decoration:none;
+      color:white; 
+      font-size:25px; 
+      background-color:#5c8a8a;
+      padding:7px; 
+      padding-left:13px; 
+      padding-right:13px; 
+      border-radius:5px; 
+      margin-bottom:15px;
+   
+	}
+	.link:hover{
+		background-color:#364f4f; 
+		transition:all 0.4s ease-in;
+	}
+	.linkH{
+		background-color:#000d1a;
+		color:#000d1a;
+		width:44px;
+		margin-left:70px; 
+		
+	}
+	.linkH:hover{
+	  color:white;
+	  transition:all 0.4s ease-in;
+	 
+	}
+	.link2{
+	  text-decoration:none;
+      color:white; 
+      font-size:25px; 
+      background-color:#5c8a8a;
+      padding:7px; 
+      padding-left:13px; 
+      padding-right:13px; 
+      border-radius:5px; 
+      margin-bottom:15px;
+   
+	}
+	.link2:hover{
+		background-color:#364f4f; 
+		transition:all 0.4s ease-in;
+	}
+	.linkH2{
+		background-color:#000d1a;
+		color:#000d1a;
+		width:44px;
+		margin-left:130px; 
+		margin-top:-60px;
+		
+	}
+	.linkH2:hover{
+	  color:white;
+	  transition:all 0.4s ease-in;
+	 
+	}
+	.link3{
+	  text-decoration:none;
+      color:white; 
+      font-size:25px; 
+      background-color:#5c8a8a;
+      padding:7px; 
+      padding-left:13px; 
+      padding-right:13px; 
+      border-radius:5px; 
+      margin-bottom:15px;
+   
+	}
+	.link3:hover{
+		background-color:#364f4f; 
+		transition:all 0.4s ease-in;
+	}
+	.linkH3{
+		background-color:#000d1a;
+		color:#000d1a;
+		width:44px;
+		margin-left:198px; 
+		margin-top:-60px;
+		
+	}
+	.linkH3:hover{
+	  color:white;
+	  transition:all 0.4s ease-in;
+	 
+	}
+	.link4{
+	  text-decoration:none;
+      color:white; 
+      font-size:25px; 
+      background-color:#5c8a8a;
+      padding:7px; 
+      padding-left:13px; 
+      padding-right:13px; 
+      border-radius:5px; 
+      margin-bottom:15px;
+   
+	}
+	.link4:hover{
+		background-color:#364f4f; 
+		transition:all 0.4s ease-in;
+	}
+	.linkH4{
+		background-color:#000d1a;
+		color:#000d1a;
+		width:44px;
+		margin-left:268px; 
+		margin-top:-60px;
+		
+	}
+	.linkH4:hover{
+	  color:white;
+	  transition:all 0.4s ease-in;
+	 
+	}
+	.endbg2{
+		margin-top:-135px;
+		margin-right:20px;
+	}
+	.para4{
+		color:white;
+		font-size:29px;
+		font-family:Rockwell Nova;
+
+	}
+	.textin{
+		padding:10px;
+		margin-right:20px;
+		border-radius:15px;
+		width:200px;
+		font-size:17px;
+		font-family:Gill Sans Nova;
+	}
+	.textin2{
+		padding:10px;
+		border-radius:15px;
+		width:200px;
+		font-size:17px;
+		font-family:Gill Sans Nova;
+	}
+	.button{
+	    padding:15px;
+	    background-color:#264d73; 	
+	    color:white;
+	    border:none;
+	    font-size:18px;
+	    font-family:Gill Sans Nova;
+	    margin-right:150px;
+	    width:200px;
+	    border-radius:10px;
+	}
+	.button:hover{
+		background-color:#19334d;
+		color:black;
+		transition:all 0.4s ease-in;
+	}
+	.endbar{
+      background-color: #011a32;
+      color:#737373;
+      padding:10px;
+      font-family:Calibri;
+      text-decoration:none;
+	}
+	.barlink a{
+		text-decoration:none;
+		font-family:Calibri;
+		color:#737373;
+		margin-right:3px;
+	}
+	.barlink a:hover{
+		color:#993333;
+		transition:all 0.3s ease-out;
+	}
+</style>
+<body>
+<div class="mainbg">	
+  <p align="center" class="header"><label class="icon"><i class="fa fa-book"></i></label>&nbsp;&nbsp;&nbsp;&nbsp;QUICK MATH QUIZ ( QMQ )</p>
+  <p class="para1">Welcome to QMQ where you can Revise<br> mathematical question to help with <br>any Examination based on your level of study</p><br><br>
+  <form>
+  	<input class="text" autocomplete="off" type="text" id="tx1" placeholder="Enter FullName"><br>
+  	<input class="text" autocomplete="off" type="text" id="gd1" placeholder="E.g Grade 1-4"><br>
+  	<input class="b3" type="button" name="nt1" id="nt1" onclick="check(this.form)" value="Next">
+  </form>
+</div>
+<div class="bg1">
+   <div align="center"> 	
+	<h1 class="heading"><b class="letter">Q</b>UICK <b class="letter">Q</b>UIZ ( Double <span class="letter"> Q </span>)</h1>
+	<hr  size="3px" color="#660000" class="line"><br><br>
+   </div>	
+        <p class="para2">Here At Quick Quiz ( Double Q ), Our Goal is to<br> Anaylze How Good your Method of Studying is<br> By Asking Question Based on the Topic Which<br> After Research are Question that a Prepared<br> Student Should to Able to Answer</p>
+       
+       	<img src="bgimg7.png" align="right" class="pic">
+       
+ <br><br><br>
+ <div align="center">
+  <h1 class="heading">Make Your Own Test</h1>
+  <hr  size="3px" color="#660000" class="line">
+ </div><br><br><br>
+ <p class="para3" align="right">If you Want a More Accurate Result or Analysis,<br>Double Q has a Feature Where you the Student,<br>Can Set the Question Yourselves,Store them and<br>Answer After Studying. Of course so as it Will be <br> Challange we Will Shuffle The Option / Question<br>To Get a Better Expereince its Adviced you Give<br>Someone to Set this Question.</p>
+ <img src="bgimg11.jpg" align="left" class="pic2">
+</div>
+<div class="endbg"><br><br><br>
+		<p style="color:white; margin-left:20px; font-size:27px; font-family:Rockwell Nova; margin-top:0px;">You Can Follow Us On Social Media: </p><br><br>
+  <div class="linkH">
+   <span class="link">	
+     <a href="#" style="text-decoration:none; color:white;"><i class="fa fa-facebook"></i></a>
+   </span>  
+    <p style=" font-family:Gill Sans Nova; margin-top:10px;">FaceBook</p>
+  </div> 
+
+  <div class="linkH2">
+   <span class="link2">	
+     <a href="#" style="text-decoration:none; color:white;"><i class="fa fa-instagram"></i></a>
+   </span>  
+    <p style=" font-family:Gill Sans Nova; margin-top:10px;">Instagram</p>
+  </div> 
+
+  <div class="linkH3">
+   <span class="link3">	
+     <a href="#" style="text-decoration:none; color:white;"><i class="fa fa-twitter"></i></a>
+   </span>  
+    <p style=" font-family:Gill Sans Nova; margin-top:10px;">Twitter</p>
+  </div> 
+
+  <div class="linkH4">
+   <span class="link4">	
+     <a href="#" style="text-decoration:none; color:white;"><i class="fa fa-telegram"></i></a>
+   </span>  
+    <p style=" font-family:Gill Sans Nova; margin-top:10px;">Telegram</p>
+  </div>
+  <div align="right" class="endbg2">
+    <form>
+    	<p class="para4">Login your Double Qs Account </p><br>
+        <input type="text" class="textin" name="t1" id="t1" placeholder="Username"><input type="text" class="textin2" name="t2" id="t2" placeholder="Password"><br><br>
+        <input type="button" class="button" name="b1" id="b1" value="Login!">
+    </form>
+  </div><br>
+</div>
+
+<div class="endbar">   
+  <span>Copyright © 2021 Quick Quiz ( Double Q's). All Rights Reserved.</span>	
+    <span style="float:right;" class="barlink">
+    <a href="#">Terms&Conditions</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Home</a>
+    <a href="#">Sign In</a>
+  </span>
+</div>
+<script language="javascript">
+ function check(form)
+ {
+     if( form.gd1.value == "1" || form.gd1.value == "grade 1") {
+     var name = document.getElementById("tx1").value;
+		alert("Welcome "+ name +",Your Quiz  Is Ready");
+		window.open('q1.html');
+	}
+     else if( form.gd1.value == "2") {
+     var name = document.getElementById("tx1").value;
+		alert("Welcome "+ name +",Your Quiz Is Ready");
+		window.open('grade2.html')
+	}
+	     else if( form.gd1.value == "3") {
+     var name = document.getElementById("tx1").value;
+		alert("Welcome "+ name +",Your Quiz Is Ready");
+		window.open('grade 3.html')
+	}
+	 else if( form.gd1.value == "4") {
+     var name = document.getElementById("tx1").value;
+		alert("Welcome "+ name +",Your Quiz Is Ready")
+		window.open('grade 4.html')
+	}
+	else{
+		alert("wrong")
+	}
+}
+</script>
+</body>
+</html>

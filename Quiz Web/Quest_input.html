@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">	<title>Create Your Own Quiz</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/3cf8fead73.js" crossorigin="anonymous"></script>
+</head>
+<style type="text/css">
+	*{
+		margin:0px;
+	}
+	.bg{
+		background-image:url(bgimg13.jpg);
+		background-size:cover;
+		background-position:fixed;
+		padding:30px;
+		margin-top:-68.5px;	
+	}
+	.banner{
+		background-color:#ededed;
+		padding:10px;
+		width:920px;
+		margin-left:60px;
+		position:relative;
+
+	}
+    .input{
+		width:220px;
+		padding:10px;
+		font-family:Gill Sans Nova;
+		font-size:19px;
+		margin-top:10px;
+		margin-bottom:20px;
+        border-radius:10px;
+	}
+	.input:focus{
+		outline:none;
+	}
+	.header{
+		background-color:#264d73;
+		color:white;
+		margin:0px;
+		width:900px;
+		padding:20px;
+		margin-top:130px;
+		margin-left:60px;
+		border-top-right-radius:20px;
+		border-top-left-radius:20px;
+	}
+	.title{
+		background-color:#264d73;
+		font-size:50px;
+	    font-family:ROckwell Nova;
+	    margin-top:-70px;
+	}
+	.icon{
+		color:black;
+		font-size:55px;
+		margin-right:350px;
+	}
+	.head1{
+		font-size:35px;
+		font-family:comic Sans MS;
+
+	}
+	.para{
+		color:black;
+		font-size:23px;
+		font-family:Rockwell Nova;
+	}
+	.Quest{
+		border:none;
+		border-bottom:2px solid black;
+		background-color:#ededed;
+		padding:10px;
+		font-size:23px;
+		width:190px;
+		margin-bottom:20px;
+		font-family:Gill Sans Nova;
+	}
+	.Quest:focus{
+		outline:none;
+		width:240px;
+		border-bottom:2px solid #862d2d;
+		transition:all 0.3s ease;
+	}
+    .setting{
+      float:right;
+      margin-top:-330px;
+      margin-right:90px;
+    }
+    .dropbtn{
+    	background-color:#d9d9d9;
+    	color:black;
+    	padding:7px;
+    	border:1.5px solid #3973ac;
+    	border-radius:40px;
+    	font-family:Gill Sans Nova;
+    	font-size:18px;
+    	margin-bottom:7px;
+    }
+    .dropdown{
+    	display:inline-block;
+    	position:relative;
+    }
+    .dropdown-content{
+    	display:none;
+    	position:absolute;
+    	background-color:inherit;
+    	width:100px;
+    }
+    .drop-content{
+       	background-color:#d9d9d9;
+    	color:black;
+    	padding:6px;
+    	border:1px solid black;
+    	border-radius:40px;
+    	font-family:Gill Sans Nova;
+    	font-size:15px;
+    	margin-right:50px;
+    	margin-bottom:7px;
+        float:center;
+    }
+    @keyframes anime4{
+    	0%{   opacity:10%;}
+    	25%{  opacity:25%;}
+    	50%{  opacity:50%;}
+    	75%{  opacity:75%;}
+    	100%{ opacity: 100%;}
+    }
+        @keyframes anime3{
+    	0%{  opacity:0%;}
+    	25%{  opacity:10%;}
+    	50%{  opacity:35%;}
+    	70%{  opacity:65%;}
+    	80%{  opacity:85%;}
+    	100%{ opacity:100%;}
+    }
+        @keyframes anime2{
+    	0%{   opacity:0%;}
+    	25%{  opacity:0%;}
+    	40%{  opacity:10%;}
+    	60%{  opacity:35%;}
+        70%{  opacity:65%;}
+        80%{  opacity:85%;}
+    	100%{ opacity: 100%;}
+    }
+        @keyframes anime1{
+    	0%{  opacity:0%;}
+    	20%{ opacity:0%;}
+    	30%{ opacity:0%;}
+    	40%{ opacity:10%;}
+    	60%{ opacity:35%}
+    	70%{ opacity:65%}
+    	80%{ opacity:85%}
+    	100%{opacity: 100%;}
+    }
+    .drop-content:hover{
+    	background-color:#a6a6a6;
+    	transition:all 0.4s ease;
+        margin-left:15px;
+       	    	
+    }
+    .dropdown:hover .dropdown-content{
+    	display:block;
+    }
+    .dropdown:hover .dropbtn{
+    	padding-right:10px;
+    	padding-left:10px;
+    	transition:all 0.4s ease;    	
+    }
+    .gear{
+    	float:right;
+        color:#993333;
+    }
+    .dropdown:hover .gear{
+    	transform:rotate(45deg);
+    	transform:rotate(90deg);
+    	transform:rotate(180deg);
+    	transition:all 0.8s ease-out;
+    }
+    .content-icon{
+    	float:right; 
+    	color:#993333;
+    }
+    .drop-content:hover .content-icon{
+    	color:#4e884e;
+    	font-size:18px;
+    	transition:all 0.3s ease;
+    }
+    .para1{
+  		color:black;
+		font-size:17px;
+		margin-left:50px;
+		font-family:Rockwell Nova;
+    }
+    .option{
+    	display:block;
+    	position:relative;
+        font-size:18px;
+        margin-bottom:5px;
+        cursor:pointer;
+    }
+    .option .radio{
+    	position:absolute;
+    	display:none;
+    	cursor:pointer;
+    }
+    .btn{
+    	position:absolute;
+    	top:12px;
+    	right:89%;
+        height:20px;
+        width:20px;
+        border:1.5px solid #2e1700;
+        background-color:lightgray;
+        border-radius:50%;	
+    }
+    .option:hover .radio ~ .btn{
+    	background-color:darkgray;
+    	width:21px;
+    	height:21px;
+    	transition:all 0.3s ease-out;
+    }
+    .option .radio:checked ~ .btn{
+    	background-color:#0073e6;
+    }
+    .btn:after{
+    	content:"";
+    	display:none;
+    	position:absolute;
+    }
+    .option .radio:checked ~ .btn:after{
+    	display:inline-block;
+    }
+    .option .btn:after{
+    	top:5px;
+    	left:5px;
+    	background-color:white;
+    	height:8px;
+    	width:8px;
+    	border:1px solid black;
+    	border-radius:50%;
+    }
+    .btn1{
+    	position:absolute;
+    	top:13px;
+    	right:89%;
+        height:20px;
+        width:20px;
+        border:1.5px solid #2e1700;
+        background-color:lightgray;
+        border-radius:50%;	
+    }
+    .option:hover .radio ~ .btn1{
+    	background-color:darkgray;
+    	width:21px;
+    	height:21px;
+    	transition:all 0.3s ease-out;
+    }
+    .option .radio:checked ~ .btn1{
+    	background-color:#0073e6;
+    }
+    .btn1:after{
+    	content:"";
+    	display:none;
+    	position:absolute;
+    }
+    .option .radio:checked ~ .btn1:after{
+    	display:inline-block;
+    }
+    .option .btn1:after{
+    	top:5px;
+    	left:5px;
+    	background-color:white;
+    	height:8px;
+    	width:8px;
+    	border:1px solid black;
+    	border-radius:50%;
+    }
+    .para2{
+    	font-size:14px;
+    	font-family:Rockwell Nova;
+    	font-style:italic;
+    	margin-left:60px;
+    	color:#bfbfbf;
+    }
+    .quest2{
+   		border:none;
+		border-bottom:2px solid black;
+		background-color:#ededed;
+		padding:10px;
+		margin-left:30px;
+		font-size:17px;
+		width:130px;
+		font-family:Gill Sans Nova;
+    }
+    .quest2:focus{
+      width:150px;
+      outline:none;
+      transition:all 0.3s ease;
+    }
+    .para1_1{
+   		color:black;
+		font-size:17px;
+		margin-left:50px;
+		font-family:Rockwell Nova;
+    }
+    .para1_2{
+   		color:black;
+		font-size:17px;
+		margin-left:15px;
+		font-family:Rockwell Nova;
+    }
+    .add{
+    	background-color:#bfbfbf;
+    	color:#367c36;
+    	position:relative;
+    	font-size:17px;
+    	float:right;
+    	margin-right:160px;
+    	padding:10px;
+    	border:1px solid black;
+    	width:10px;
+    	margin-top:-30px;
+    	height:10px;
+    	border-radius:50%;
+    }
+    .plus{
+    	position:absolute;
+    	left:8px;
+        top:8px;
+    }
+    .add:hover{
+      width:12px;
+      height:12px;
+  }
+    .add:hover .plus{
+      font-size:19px;
+      transition:all 0.4s ease;
+    }
+    .keyboard{
+    	background-color:#d9d9d9;
+    	width:300px;
+    	display:block;
+    	float:right;
+    	position:absolute;
+    	top:50%;
+    	left:45%;
+    	width:400px;
+    	padding:20px;
+    }
+    .para3{
+    	font-size:34px;
+    	font-family:Gill Sans Nova;
+    }
+    .symbols{
+     width:70px;
+     height:50px;
+     margin-left:4px;
+     margin-bottom:7px;
+     background-color:#f2f2f2;
+     border:none;
+     font-size:24px;
+     font-family:Gill Sans Nova;
+    }
+    .close{
+    	background-color:#d9d9d9;
+    	border:none;
+    	float:right;
+    	padding:7px;
+       	width:20px;
+    	height:20px;
+        border-radius:50%;
+    	margin-top:-230px;
+        position:absolute;
+        margin-left:940px;
+    }
+    .symbols:hover{
+    	background-color:#bfbfbf;
+    }
+    .close:hover{
+    	background-color:#bfbfbf;
+   }
+</style>
+<body>
+<div class="bg">
+ 	<div align="center" class="header">
+ 	 <label class="icon"><i class="fa fa-book"></i></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p class="title">Double <span style="color:#862d2d;"><b>Q</b></span>'s</p>
+ 	</div> 
+ <div class="banner" style="max-width:1000px">
+<u><h1 class="head1">QUESTION 1:</h1></u>
+<p style="font-size:14px; font-family:comic Sans MS; font-style:italic; margin-top:10px; margin-bottom:30px"><b>Instructions: Enter your question in the textbar below, Click on the "Setting" buttons to either select the answer method(Objective or short answer) You can also select the option "Calculator" to enable calculator during test and lastly you can select the "Special character" option for mathematical symbols.</b></p>
+ <span class="para">Q1.</span><input type="text" class="Quest" name="t1" id="t1" placeholder="Enter Question"><br>
+ <span id="option" style="display:none;">  
+  <span class="para1">Option: </span><br>
+  <p class="para2">Select Which Is Suppose To Be Right Answer</p>
+    <label class="option" id="option">  
+      <label class="para1">(a)&nbsp;</label><input type="radio" class="radio" style="margin-top:20px;" name="r1" id="r1"><input type="text" class="quest2" name="t2" id="t2" placeholder="Enter Option 1">
+      <span class="btn"></span>
+    </label>
+    <label class="option" >  
+      <label class="para1_1">(b)&nbsp;</label><input type="radio" style="margin-top:-10px;" class="radio" style="margin-top:20px;" name="r1" id="r1"><input type="text" class="quest2" name="t2" id="t2" placeholder="Enter Option 2">
+      <span class="btn1"></span>
+    </label>
+    <label class="option" style="margin-left:300px; margin-top:-97px;">  
+      <label class="para1_2">(c)&nbsp;</label><input type="radio" style="margin-top:-10px;" class="radio" style="margin-top:20px;" name="r1" id="r1"><input type="text" class="quest2" name="t2" id="t2" placeholder="Enter Option 3">
+      <span class="btn1"></span>
+    </label> 
+    <label class="option" style="margin-left:300px;">  
+      <label class="para1_2">(d)&nbsp;</label><input type="radio" style="margin-top:-10px;" class="radio" style="margin-top:20px;" name="r1" id="r1"><input type="text" class="quest2" name="t2" id="t2" placeholder="Enter Option 4">
+      <span class="btn1"></span>
+    </label>
+ </span> 
+    <span id="bar">
+      <p class="para2">Please Enter What The Right Answer Should be</p>	
+      <label style="margin-left:50px; font-size:18px; font-family:Rockwell Nova;">Answer: </label>
+  	  <input class="input" autocomplete="off" type="text" id="tx1" placeholder="Write Your Answer">
+  </span>
+ </div>
+ <span class="setting">
+ 	<div class="dropdown">
+ 		<button class="dropbtn">Settings&nbsp;<div class="gear"><i class="fa fa-gear"></i></div></button>
+ 		<div class="dropdown-content">
+ 			<button class="drop-content" style="animation-name:anime1; animation-duration:0.5s; animation-timing-function:ease-out; position:relative; width:100px;" onclick="obj()">Objective<div  class="content-icon"><i class="fa fa-dot-circle-o"></i></div></button>
+
+ 			<button class="drop-content" style="width:120px; animation-name:anime2; animation-duration:0.5s; animation-timing-function:ease-out; position:relative;" onclick="short()">Short Answer<div  class="content-icon"><i class="fas fa-underline"></i></div></button>
+
+ 			<button class="drop-content" style="animation-name:anime3; animation-duration:0.5s; animation-timing-function:ease-out; position:relative; width:100px;">Calculator<div class="content-icon"><i class="fas fa-calculator"></i></div></button>
+
+ 			<button class="drop-content" style="width:155px; animation-name:anime4; animation-duration:0.5s; animation-timing-function:ease-out; position:relative;" onclick="myFunction()">Special Characters<div class="content-icon"><i class="fas fa-keyboard"></i></div></button>
+ 		</div>
+ 	</div>
+ </span>
+  <label class="add" >
+ 	<span class="plus"><i class="fa fa-plus"></i></span>
+ </label>
+ <button onclick="cancel()">Test</button>   
+ <span id="keyboard">
+ <span id="keyboard1" style="display:none;">  
+ <div class="keyboard" align="center">
+ 	 <p class="para3">Symbols</p><br>
+     <button class="symbols" style="margin-left:-10px;"><b>✕</b></button>
+     <button class="symbols">÷</button>
+     <button class="symbols">+</button>
+     <button class="symbols">−</button>
+     <button class="symbols">√</button><br>
+     <button class="symbols">x<sup style="font-size:16px;">2</sup></button>
+     <button class="symbols">y<sup style="font-size:16px;">°</sup></button>
+     <button class="symbols" style="font-family:Calibri">π</button>
+     <button class="symbols">x<sup  style="font-size:16px;">y</sup></button><br>
+     <button class="symbols">sin</button>
+     <button class="symbols">cos</button>
+     <button class="symbols">tan</button>
+ </div>	
+</span> 
+</span>
+ <br><br><br><br><br>
+</div>
+</body>
+<script type="text/javascript">
+	function obj(){
+		var a = document.getElementById("option");
+		var b = document.getElementById("bar");
+		if (a.style.display == "none") {
+			a.style.display = "block";
+			b.style.display = "none"
+		}
+		else{
+			a.style.display = "block"
+		}
+	}
+	function short(){
+		var a = document.getElementById("option");
+		var b = document.getElementById("bar");
+		if (b.style.display == "none") {
+			b.style.display = "block";
+			a.style.display = "none";
+		}
+		else{
+			b.style.display ="block"
+		}
+	}
+function myFunction(){
+    var c = document.getElementById("keyboard1");
+    if (c.style.display === "none") {
+        c.style.display = "block";
+    }
+    else{
+        c.style.display = "none"
+        n.style.display = "none"
+    }
+}
+</script>
+</html>
