@@ -344,11 +344,21 @@
     	width:300px;
     	display:block;
     	float:right;
-    	position:absolute;
-    	top:50%;
+    	position:fixed;
+    	top:57%;
     	left:45%;
     	width:400px;
     	padding:20px;
+        animation-name:board;
+        animation-duration:0.2s;
+        animation-timing-function:ease-out;
+    }
+    @keyframes board{
+        0%{top:500px;}
+        25%{top:450px;}
+        50%{top:410px;}
+        75%{top:400px;}
+        100%{top:370px;}
     }
     .para3{
     	font-size:34px;
@@ -434,10 +444,9 @@
  </span>
   <label class="add" >
  	<span class="plus"><i class="fa fa-plus"></i></span>
- </label>
- <button onclick="cancel()">Test</button>   
+ </label> 
  <span id="keyboard">
- <span id="keyboard1" style="display:none;">  
+ <span id="keyboard1" style="display: none;">  
  <div class="keyboard" align="center">
  	 <p class="para3">Symbols</p><br>
      <button class="symbols" style="margin-left:-10px;"><b>✕</b></button>
