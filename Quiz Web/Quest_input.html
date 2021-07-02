@@ -44,8 +44,8 @@
 		padding:20px;
 		margin-top:130px;
 		margin-left:60px;
-		border-top-right-radius:20px;
-		border-top-left-radius:20px;
+		border-top-right-radius:30px;
+		border-top-left-radius:30px;
 	}
 	.title{
 		background-color:#264d73;
@@ -200,6 +200,16 @@
         font-size:18px;
         margin-bottom:5px;
         cursor:pointer;
+        animation-name:obj;
+        animation-duration:0.5s;
+        animation-timing-function:ease; 
+    }
+    @keyframes obj{
+        0%{opacity:0%}
+        25%{opacity:25%}
+        50%{opacity:50%}
+        75%{opacity:75%}
+        100%{opacity:100%}
     }
     .option .radio{
     	position:absolute;
@@ -346,8 +356,10 @@
     	float:right;
     	position:fixed;
     	top:57%;
-    	left:45%;
+    	left:48%;
     	width:400px;
+        border-radius:30px;
+        border:1px solid black;
     	padding:20px;
         animation-name:board;
         animation-duration:0.2s;
@@ -392,6 +404,18 @@
     .close:hover{
     	background-color:#bfbfbf;
    }
+   .short{
+    animation-name:short;
+    animation-duration:0.4s;
+    animation-timing-function:ease;
+   }
+  @keyframes short{
+        0%{opacity:0%}
+        25%{opacity:25%}
+        50%{opacity:50%}
+        75%{opacity:75%}
+        100%{opacity:100%}
+    }
 </style>
 <body>
 <div class="bg">
@@ -410,19 +434,19 @@
       <span class="btn"></span>
     </label>
     <label class="option" >  
-      <label class="para1_1">(b)&nbsp;</label><input type="radio" style="margin-top:-10px;" class="radio" style="margin-top:20px;" name="r1" id="r1"><input type="text" class="quest2" name="t2" id="t2" placeholder="Enter Option 2">
+      <label class="para1_1">(b)&nbsp;</label><input type="radio" style="margin-top:-10px;" class="radio" style="margin-top:20px;" name="r1" id="r1"><input type="text" class="quest2" name="t2" id="t3" placeholder="Enter Option 2">
       <span class="btn1"></span>
     </label>
     <label class="option" style="margin-left:300px; margin-top:-97px;">  
-      <label class="para1_2">(c)&nbsp;</label><input type="radio" style="margin-top:-10px;" class="radio" style="margin-top:20px;" name="r1" id="r1"><input type="text" class="quest2" name="t2" id="t2" placeholder="Enter Option 3">
+      <label class="para1_2">(c)&nbsp;</label><input type="radio" style="margin-top:-10px;" class="radio" style="margin-top:20px;" name="r1" id="r1"><input type="text" class="quest2" name="t2" id="t4" placeholder="Enter Option 3">
       <span class="btn1"></span>
     </label> 
     <label class="option" style="margin-left:300px;">  
-      <label class="para1_2">(d)&nbsp;</label><input type="radio" style="margin-top:-10px;" class="radio" style="margin-top:20px;" name="r1" id="r1"><input type="text" class="quest2" name="t2" id="t2" placeholder="Enter Option 4">
+      <label class="para1_2">(d)&nbsp;</label><input type="radio" style="margin-top:-10px;" class="radio" style="margin-top:20px;" name="r1" id="r1"><input type="text" class="quest2" name="t2" id="t5" placeholder="Enter Option 4">
       <span class="btn1"></span>
     </label>
  </span> 
-    <span id="bar">
+    <span id="bar" class="short">
       <p class="para2">Please Enter What The Right Answer Should be</p>	
       <label style="margin-left:50px; font-size:18px; font-family:Rockwell Nova;">Answer: </label>
   	  <input class="input" autocomplete="off" type="text" id="tx1" placeholder="Write Your Answer">
@@ -438,29 +462,29 @@
 
  			<button class="drop-content" style="animation-name:anime3; animation-duration:0.5s; animation-timing-function:ease-out; position:relative; width:100px;">Calculator<div class="content-icon"><i class="fas fa-calculator"></i></div></button>
 
- 			<button class="drop-content" style="width:155px; animation-name:anime4; animation-duration:0.5s; animation-timing-function:ease-out; position:relative;" onclick="myFunction()">Special Characters<div class="content-icon"><i class="fas fa-keyboard"></i></div></button>
+ 			<button class="drop-content" style="width:155px; animation-name:anime4; animation-duration:0.5s; animation-timing-function:ease-out; position:relative;" onclick="symbols()">Special Characters<div class="content-icon"><i class="fas fa-keyboard"></i></div></button>
  		</div>
  	</div>
  </span>
-  <label class="add" >
+  <label class="add">
  	<span class="plus"><i class="fa fa-plus"></i></span>
  </label> 
  <span id="keyboard">
  <span id="keyboard1" style="display: none;">  
  <div class="keyboard" align="center">
  	 <p class="para3">Symbols</p><br>
-     <button class="symbols" style="margin-left:-10px;"><b>✕</b></button>
-     <button class="symbols">÷</button>
-     <button class="symbols">+</button>
-     <button class="symbols">−</button>
-     <button class="symbols">√</button><br>
-     <button class="symbols">x<sup style="font-size:16px;">2</sup></button>
-     <button class="symbols">y<sup style="font-size:16px;">°</sup></button>
-     <button class="symbols" style="font-family:Calibri">π</button>
-     <button class="symbols">x<sup  style="font-size:16px;">y</sup></button><br>
-     <button class="symbols">sin</button>
-     <button class="symbols">cos</button>
-     <button class="symbols">tan</button>
+     <button class="symbols" style="margin-left:-10px;" onclick="times()"><b>✕</b></button>
+     <button class="symbols" onclick="divide()">÷</button>
+     <button class="symbols" onclick="plus()">+</button>
+     <button class="symbols" onclick="minus()">−</button>
+     <button class="symbols" onclick="sqrt()">√</button><br>
+     <button class="symbols" onclick="sqr()">x<sup style="font-size:16px;"><input type="text" id="up_no." style="display:none;">2</sup></button>
+     <button class="symbols" onclick="degree()">y<sup style="font-size:16px;">°</sup></button>
+     <button class="symbols" style="font-family:Calibri" onclick="pie()">π</button>
+     <button class="symbols" onclick="sqrx()">x<sup  style="font-size:16px;">y</sup></button><br>
+     <button class="symbols" onclick="sin()">sin</button>
+     <button class="symbols" onclick="cos()">cos</button>
+     <button class="symbols" onclick="tan()">tan</button>
  </div>	
 </span> 
 </span>
@@ -471,26 +495,33 @@
 	function obj(){
 		var a = document.getElementById("option");
 		var b = document.getElementById("bar");
+        var c = document.getElementById("keyboard1");
 		if (a.style.display == "none") {
 			a.style.display = "block";
-			b.style.display = "none"
+			b.style.display = "none";
+            c.style.display = "none";
+
 		}
 		else{
-			a.style.display = "block"
+			a.style.display = "block";
+            c.style.display = "none";
 		}
 	}
 	function short(){
 		var a = document.getElementById("option");
 		var b = document.getElementById("bar");
+        var c = document.getElementById("keyboard1");
 		if (b.style.display == "none") {
 			b.style.display = "block";
 			a.style.display = "none";
+            c.style.display = "none"
 		}
 		else{
 			b.style.display ="block"
+            c.style.display = "none";
 		}
 	}
-function myFunction(){
+function symbols(){
     var c = document.getElementById("keyboard1");
     if (c.style.display === "none") {
         c.style.display = "block";
@@ -499,6 +530,39 @@ function myFunction(){
         c.style.display = "none"
         n.style.display = "none"
     }
+}
+function times(){
+    document.getElementById("t1").value += "✕";
+}
+function plus(){
+    document.getElementById("t1").value += "+";
+}
+function divide(){
+    document.getElementById("t1").value += "÷";
+}
+function minus(){
+    document.getElementById("t1").value += "−";
+}
+function sqrt(){
+    document.getElementById("t1").value += "√";
+}
+function sqr(){ 
+      document.getElementById("t1").value = "^2";
+}                                         
+function degree(){
+    document.getElementById("t1").value += "^°";
+}
+function pie(){
+    document.getElementById("t1").value += "π";
+}
+function sin(){
+    document.getElementById("t1").value += "sin";
+}
+function tan(){
+    document.getElementById("t1").value += "tan";
+}
+function cos(){
+    document.getElementById("t1").value += "cos";
 }
 </script>
 </html>
