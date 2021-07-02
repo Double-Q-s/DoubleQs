@@ -346,7 +346,9 @@
     	float:right;
     	position:fixed;
     	top:57%;
-    	left:45%;
+    	left:47%;
+        border-radius:30px;
+        border:1px solid black;
     	width:400px;
     	padding:20px;
         animation-name:board;
@@ -449,18 +451,18 @@
  <span id="keyboard1" style="display: none;">  
  <div class="keyboard" align="center">
  	 <p class="para3">Symbols</p><br>
-     <button class="symbols" style="margin-left:-10px;"><b>✕</b></button>
-     <button class="symbols">÷</button>
-     <button class="symbols">+</button>
-     <button class="symbols">−</button>
-     <button class="symbols">√</button><br>
-     <button class="symbols">x<sup style="font-size:16px;">2</sup></button>
-     <button class="symbols">y<sup style="font-size:16px;">°</sup></button>
-     <button class="symbols" style="font-family:Calibri">π</button>
-     <button class="symbols">x<sup  style="font-size:16px;">y</sup></button><br>
-     <button class="symbols">sin</button>
-     <button class="symbols">cos</button>
-     <button class="symbols">tan</button>
+     <button class="symbols" style="margin-left:-10px;" onclick="times()"><b>✕</b></button>
+     <button class="symbols" onclick="divide()">÷</button>
+     <button class="symbols" onclick="plus()">+</button>
+     <button class="symbols" onclick="minus()">−</button>
+     <button class="symbols" onclick="sqrt()">√</button><br>
+     <button class="symbols" onclick="sqr()">x<sup style="font-size:16px;">2</sup></button>
+     <button class="symbols" onclick="degree()">y<sup style="font-size:16px;">°</sup></button>
+     <button class="symbols" style="font-family:Calibri" onclick="pie()">π</button>
+     <button class="symbols" onclick="sqrx()">x<sup  style="font-size:16px;">y</sup></button><br>
+     <button class="symbols" onclick="sin()">sin</button>
+     <button class="symbols" onclick="cos()">cos</button>
+     <button class="symbols" onclick="tan()">tan</button>
  </div>	
 </span> 
 </span>
@@ -500,5 +502,79 @@ function myFunction(){
         n.style.display = "none"
     }
 }
+
+    function obj(){
+        var a = document.getElementById("option");
+        var b = document.getElementById("bar");
+        var c = document.getElementById("keyboard1");
+        if (a.style.display == "none") {
+            a.style.display = "block";
+            b.style.display = "none";
+            c.style.display = "none";
+
+        }
+        else{
+            a.style.display = "block";
+            c.style.display = "none";
+        }
+    }
+    function short(){
+        var a = document.getElementById("option");
+        var b = document.getElementById("bar");
+        var c = document.getElementById("keyboard1");
+        if (b.style.display == "none") {
+            b.style.display = "block";
+            a.style.display = "none";
+            c.style.display = "none"
+        }
+        else{
+            b.style.display ="block"
+            c.style.display = "none";
+        }
+    }
+function symbols(){
+    var c = document.getElementById("keyboard1");
+    if (c.style.display === "none") {
+        c.style.display = "block";
+    }
+    else{
+        c.style.display = "none"
+        n.style.display = "none"
+    }
+}
+function times(){
+    document.getElementById("t1").value += "✕";
+}
+function plus(){
+    document.getElementById("t1").value += "+";
+}
+function divide(){
+    document.getElementById("t1").value += "÷";
+}
+function minus(){
+    document.getElementById("t1").value += "−";
+}
+function sqrt(){
+    document.getElementById("t1").value += "√";
+}
+function sqr(){ 
+      document.getElementById("t1").value += "^2";
+}                                         
+function degree(){
+    document.getElementById("t1").value += "^°";
+}
+function pie(){
+    document.getElementById("t1").value += "π";
+}
+function sin(){
+    document.getElementById("t1").value += "sin";
+}
+function tan(){
+    document.getElementById("t1").value += "tan";
+}
+function cos(){
+    document.getElementById("t1").value += "cos";
+}
+
 </script>
 </html>
